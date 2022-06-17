@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Services\ArraySearch;
-use App\Services\ArraySort;
+use App\Services\ArrayGenerate;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +15,6 @@ use App\Services\ArraySort;
 */
 
 Route::get('/', function () {
-    return view('index');
+    // return view('index', ['data' => ArrayGenerate::intArray(10)]);
+    return view('index', ['data' => 'bbbbbbbbbbb']);
 });
