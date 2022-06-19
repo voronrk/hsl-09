@@ -1,3 +1,3 @@
 <pre>
-{{ $data }}
+{!! print_r($unsortedArray) !!}
 </pre>

@@ -15,6 +15,8 @@ use App\Services\ArrayGenerate;
 */
 
 Route::get('/', function () {
-    // return view('index', ['data' => ArrayGenerate::intArray(10)]);
-    return view('index', ['data' => 'bbbbbbbbbbb']);
+    return view('index', [
+        'unsortedArray' => ArrayGenerate::intArray(10),
+
+    ]);
 });
