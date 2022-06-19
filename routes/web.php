@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Services\ArrayGenerate;
+use App\Services\ArraySort;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,16 @@ use App\Services\ArrayGenerate;
 */
 
 Route::get('/', function () {
-    return view('index', [
-        'unsortedArray' => ArrayGenerate::intArray(10),
+    return view('index', ['view' => view('pages.main', [])]);
+});
 
+Route::get('/{method}', function ($method) {
+    $unsortedArray = ArrayGenerate::intArray(10);
+    return view('index', ['view' => view('pages.sortResult', [
+        'unsortedArray' => $unsortedArray,
+        'sortedArray' => ArraySort::sort($unsortedArray, $method),
+        ])        
     ]);
 });
+
+

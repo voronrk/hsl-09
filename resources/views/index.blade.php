@@ -1,3 +1,5 @@
-@include('templates.header')
-@include('pages.main')
-@include('templates.footer')
+@extends('templates.layout')
+
+@section('page')
+{!! $view !!}
+@endsection

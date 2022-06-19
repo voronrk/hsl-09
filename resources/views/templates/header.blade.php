@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar is-link" role="navigation" aria-label="main navigation">
         <div class="navbar-brand container">
-          <a class="navbar-item title" href="#">Hawking school. Hometask 09</a>
+          <a class="navbar-item title" href="/">Hawking school. Hometask 09</a>
         </div>
     </nav>
     <div class="section">
